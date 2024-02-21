@@ -1,5 +1,14 @@
 import axios from "axios";
-import { calegDprdKabKotLebakDapil2, partai } from './data'
+import {
+  calegDprdKabKotLebakDapil2,
+  partai,
+  calegDprRiDapilJakarta1,
+  calegDprRiDapilJabar8,
+  calegDprdProvJabarDapil12,
+  calegDprdKabCirebonDapil1,
+  calegDprdKabCirebonDapil4,
+  calegDprdKabLebakDapil5,
+} from './data'
 
 // import { vote, nationalVoteParty } from './dummy'
 
@@ -117,68 +126,70 @@ async function resultVote({
 ( async () => {
   const urlGetSuaraPartaiNasional: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/0.json"
 
+  /**
+   * KABUPATEN
+   */
   // kabupaten lebak dapil 2
-  const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdprdk/36/3602/360202.json"
-  const seats: number = 8
-  const usePT: boolean = false
-  const caption: string= "Perkiraan kursi DPRD Kabupaten Lebak Dapil 2 sebagai berikut"
-  const caleg = calegDprdKabKotLebakDapil2
+  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdprdk/36/3602/360202.json"
+  // const seats: number = 8
+  // const usePT: boolean = false
+  // const caption: string= "Perkiraan kursi DPRD Kabupaten Lebak Dapil 2 sebagai berikut"
+  // const caleg = 
+
+  // kabupaten lebak dapil 5
+  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdprdk/36/3602/360205.json"
+  // const seats: number = 7
+  // const usePT: boolean = false
+  // const caption: string= "Perkiraan kursi DPRD Kabupaten Lebak Dapil 5 jumlah kursi 7, sebagai berikut"
+  // const caleg = calegDprdKabLebakDapil5
+
+  // kabupaten cirebon - jabar dapil 1
+  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdprdk/32/3209/320901.json"
+  // const seats: number = 8
+  // const usePT: boolean = false
+  // const caption: string= "Perkiraan kursi DPRD Kabupaten Cirebon Dapil 1, dengan jumlah kursi 8, sebagai berikut: "
+  // const caleg = calegDprdKabCirebonDapil1
+
+  // kabupaten cirebon - jabar dapil 4
+  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdprdk/32/3209/320904.json"
+  // const seats: number = 8
+  // const usePT: boolean = false
+  // const caption: string= "Perkiraan kursi DPRD Kabupaten Cirebon Dapil 4, dengan jumlah kursi 8, sebagai berikut: "
+  // const caleg = calegDprdKabCirebonDapil4
+  
+  /**
+   * NASIONAL
+   */
 
   // DPR RI DKI Jakarta 1
-  // const urlGetCaleg: string = "https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/3101.json"
   // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3101.json"
   // const seats: number = 6
   // const usePT: boolean = true
   // const caption: string = "Perkiraan kursi DPR RI Dapil Jakarta 1. Jumlah Kursi 6: "
+  // const caleg = calegDprRiDapilJakarta1
 
-  // DPR RI DKI Jakarta 2
-  // const urlGetCaleg: string = "https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/3102.json"
-  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3102.json"
-  // const seats: number = 7
-  // const usePT: boolean = true
-  // const caption: string = "Perkiraan kursi DPR RI Dapil Jakarta 2. Jumlah Kursi 7: "
-
-  // DPR RI DKI Jakarta 3
-  // const urlGetCaleg: string = "https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/3103.json"
-  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3103.json"
-  // const seats: number = 8
-  // const usePT: boolean = true
-  // const caption: string = "Perkiraan kursi DPR RI Dapil Jakarta 3. Jumlah Kursi 8: "
-
-  // // DPR RI Jabar 1
-  // const urlGetCaleg: string = "https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/3201.json"
-  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3201.json"
-  // const seats: number = 7
-  // const usePT: boolean = true
-  // const caption: string = "Perkiraan kursi DPR RI Dapil Jabar 1. Jumlah Kursi 7: "
-
-  // DPR RI Jabar 5
-  // const urlGetCaleg: string = "https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/3205.json"
-  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3205.json"
+  // DPR RI Jabar 8
+  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3208.json"
   // const seats: number = 9
   // const usePT: boolean = true
-  // const caption: string = "Perkiraan kursi DPR RI Dapil Jabar 5. Jumlah Kursi 9: "
+  // const caption: string = "Perkiraan kursi DPR RI Dapil Jabar 8. Jumlah Kursi 9: "
+  // const caleg = calegDprRiDapilJabar8
 
-  // DPR RI Jabar 11
-  // const urlGetCaleg: string = "https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/3211.json"
-  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3211.json"
-  // const seats: number = 10
-  // const usePT: boolean = true
-  // const caption: string = "Perkiraan kursi DPR RI Dapil Jabar 11. Jumlah Kursi 10: "
+  // DPR RI Jabar 8
+  const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3601.json"
+  const seats: number = 6
+  const usePT: boolean = true
+  const caption: string = "Perkiraan kursi DPR RI Dapil Banten 1. Jumlah Kursi 9: "
+  const caleg = calegDprRiDapilJabar8
 
-  // DPR RI Jabar 7
-  // const urlGetCaleg: string = "https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/3207.json"
-  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3207.json"
-  // const seats: number = 10
-  // const usePT: boolean = true
-  // const caption: string = "Perkiraan kursi DPR RI Dapil Jabar 7. Jumlah Kursi 10: "
-
-  // DPR RI Banten 1
-  // const urlGetCaleg: string = "https://sirekap-obj-data.kpu.go.id/pemilu/caleg/partai/3601.json"
-  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3601.json"
-  // const seats: number = 6
-  // const usePT: boolean = true
-  // const caption: string = "Perkiraan kursi DPR RI Dapil Banten 1. Jumlah Kursi 6: "
+  /**
+   * PROVINSI
+   */
+  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdprdp/32/320012.json"
+  // const seats: number = 12
+  // const usePT: boolean = false
+  // const caption: string = "Perkiraan kursi DPRD Jabar dapil 12. Jumlah Kursi 12: "
+  // const caleg = calegDprdProvJabarDapil12
 
   await resultVote({
     seats,
