@@ -8,6 +8,8 @@ import {
   calegDprdKabCirebonDapil1,
   calegDprdKabCirebonDapil4,
   calegDprdKabLebakDapil5,
+  calgeDprRiDapilBanten1,
+  calegDprRiDapilJakarta2,
 } from './data'
 
 // import { vote, nationalVoteParty } from './dummy'
@@ -175,12 +177,19 @@ async function resultVote({
   // const caption: string = "Perkiraan kursi DPR RI Dapil Jabar 8. Jumlah Kursi 9: "
   // const caleg = calegDprRiDapilJabar8
 
-  // DPR RI Jabar 8
-  const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3601.json"
-  const seats: number = 6
+  // // DPR RI Banten 1
+  // const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3601.json"
+  // const seats: number = 6
+  // const usePT: boolean = true
+  // const caption: string = "Perkiraan kursi DPR RI Dapil Banten 1. Jumlah Kursi 6: "
+  // const caleg = calgeDprRiDapilBanten1
+
+  // DPR RI DKI Jakarta 2
+  const urlVoteResult: string = "https://sirekap-obj-data.kpu.go.id/pemilu/hhcd/pdpr/3102.json"
+  const seats: number = 7
   const usePT: boolean = true
-  const caption: string = "Perkiraan kursi DPR RI Dapil Banten 1. Jumlah Kursi 9: "
-  const caleg = calegDprRiDapilJabar8
+  const caption: string = "Perkiraan kursi DPR RI Dapil Jakarta 2. Jumlah Kursi 7: "
+  const caleg = calegDprRiDapilJakarta2
 
   /**
    * PROVINSI
